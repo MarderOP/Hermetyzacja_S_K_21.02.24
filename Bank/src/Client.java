@@ -4,6 +4,22 @@ public class Client {
     private Integer Age;
     private double Loan=0;
     private double InterestRate;
+    private Integer Pesel;
+
+    public Client(String name, String surname, Integer age, Integer pesel) {
+        Name = name;
+        Surname = surname;
+        Age = age;
+        Pesel = pesel;
+    }
+
+    public Integer getPesel() {
+        return Pesel;
+    }
+
+    public void setPesel(Integer pesel) {
+        Pesel = pesel;
+    }
 
     public String getName() {
         return Name;
@@ -76,11 +92,7 @@ public class Client {
             setInterestRate(CallInterestRate(value,Interest));
         }
     }
-
-    public Client(String name, String surname, Integer age) {
-        Name = name;
-        Surname = surname;
-        Age = age;
-        Loan = 0;
+    public void CallTakeLoan(double value,double Interest){
+        TakeLoan(value, Interest);
     }
 }

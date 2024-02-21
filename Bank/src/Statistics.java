@@ -29,6 +29,9 @@ public class Statistics {
     private void Info(){
         System.out.println("Liczba klientów:" + getClients() + "\nIlość pieniędzy:" + getMoney() + "\naktualna wartość odsetek:" + getInterestRate() + "%");
     }
+    public void CallInfo(){
+        Info();
+    }
 
     private void AddNewClient(Client client){
         try{
